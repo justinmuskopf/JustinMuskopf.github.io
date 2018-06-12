@@ -1,0 +1,39 @@
+<script>
+  const quoteInterval = 8000
+  const fadeTime = quoteInterval / 4
+
+  let lastUsedIndex
+
+  const getRandomInt = (max) => {
+    let randInt
+    for(let i = 0; i < 5; i++) {
+      randInt = Math.floor(Math.random() * Math.floor(max))
+      if(randInt !== lastUsedIndex) {
+        break
+      }
+    }
+
+    lastUsedIndex = randInt
+    return randInt
+  }
+  const getQuote = () => {
+    const FunnyQuotes = [
+      "'Probably the best developer I know.' ~Random Guy I paid $5",
+      "'Justin is tremendous. Truly fantastic.' ~My Mom",
+      "'An absolute pleasure to work with.' ~A Coworker who lost a bet",
+      "'Good looking code, good looking guy.' ~My Grandmother",
+      "'Dependable. Hard Working. Trustworthy.'' ~Webster's Dictionary"
+    ]
+
+    return FunnyQuotes[getRandomInt(FunnyQuotes.length)]
+  }
+
+  const setQuote = () => {
+    const newQuote = getQuote()
+    $("#quote").fadeOut(fadeTime)
+    setTimeout(() => $("#quote").html(newQuote), fadeTime)
+    setTimeout(() => $("#quote").fadeIn(fadeTime), fadeTime)
+  }
+  setQuote()
+  setInterval(setQuote, quoteInterval)
+</script>

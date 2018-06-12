@@ -1,6 +1,62 @@
+---
+---
+
 <html>
-<head>
-<meta http-equiv="refresh"
-   content="0; url=pages/home">
-</head>
+  <head>
+    <title>Home</title>
+    <script>{% include scripts/jquery.min.js %}</script>
+
+    {% include styles/index.html %}
+  </head>
+
+  <body>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h2 class="headerText" style="font-size: 36px;"><b>Home</b></h2>
+
+    <hr />
+    <p class="defaultText">
+    Home | <a href="about">About Me</a> | <a href="education">Education</a> | <a href="projects">Projects</a>
+    </p>
+
+    <hr />
+    <p>&nbsp;</p>
+
+
+    <h2 class="headerText" style="font-size: 24px;"><b>Hello World!</b></h2>
+
+    <p class="defaultText"><img src="../assets/image/me.jpg" alt="My Lovely Visage" style="width:156px;height:205px;" border="1"></p>
+
+    <p class="defaultText">My name is Justin Muskopf.</p>
+
+    <p class="defaultText">Software Engineer by day, hobby coding coffee zombie by night. <br /> <br />
+    This page is currently under construction! Please check back later for more information. <br /> <br />
+    </p>
+
+    <h2 class="headerText"><b>C | C++ | JavaScript | Python | Golang</b></h2>
+
+    <p class="defaultText">
+    <i id="quote" style="display: block; min-height: 1.5em;"></i>
+    </p>
+    <p>&nbsp;</p>
+
+    <hr />
+    <p class="defaultText">
+    <a href="https://www.linkedin.com/in/justinmuskopf/"><img class = "smallIcon" src="{{ site.url }}/assets/icon/linkedIn.png" alt="LinkedIn"</img></a>
+    <span>&nbsp;</span>
+    <a href="https://www.github.com/JustinMuskopf"><img class="smallIcon" src="{{ site.url }}/assets/icon/gitHub.jpg" alt="GitHub"</img></a>
+    <span>&nbsp;</span>
+    <a href="mailto:info@justinmuskopf.com?Subject=Let%20Me%20Hire%20You!"><img class="smallIcon" src="{{ site.url }}/assets/icon/email.png" alt="EMail"</img></a>
+    </p>
+  </div> 
+  <hr />
+
+  <footer>
+    {% include scripts/index.html %}
+  </footer>
+
+</body>
+
 </html>
